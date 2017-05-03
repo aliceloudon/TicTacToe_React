@@ -1,4 +1,6 @@
 import React from 'react'
+import  Button from './Button.jsx'
+// import GameLogic from '../model/GameLogic'
 
 class Grid extends React.Component {
 
@@ -20,20 +22,20 @@ class Grid extends React.Component {
   }
 
 
+
   render(){
 
     const gridSquares = this.state.squares.map( (square) => {
-      return <button key={square.id} p1clicked={square.p1clicked} p2clicked={square.p2clicked}></button>
+      return <Button key={square.id} p1clicked={square.p1clicked} p2clicked={square.p2clicked} ></Button>
     })
 
     return(
       <div id ="grid">
-        {gridSquares}
+        {gridSquares} 
       </div>
     )
 
   }
-
 }
 
 export default Grid
