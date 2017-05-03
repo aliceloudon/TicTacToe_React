@@ -1,11 +1,13 @@
 import React from 'react'
+import Grid from '../components/Grid'
+import Score from '../components/Score'
 
 class MainContainer extends React.Component {
 
   render(){
     return(
       <div>
-        Oh hey!
+        <Grid />
       </div>
     )
   }
