@@ -6,15 +6,15 @@ class Grid extends React.Component {
     super(props)
     this.state = {
       squares: [ 
-      { id: 1, clicked: false }, 
-      { id: 2, clicked: false }, 
-      { id: 3, clicked: false }, 
-      { id: 4, clicked: false }, 
-      { id: 5, clicked: false }, 
-      { id: 6, clicked: false }, 
-      { id: 7, clicked: false }, 
-      { id: 8, clicked: false }, 
-      { id: 9, clicked: false }
+      { id: 1, p1clicked: false, p2clicked: false }, 
+      { id: 2, p1clicked: false, p2clicked: false }, 
+      { id: 3, p1clicked: false, p2clicked: false }, 
+      { id: 4, p1clicked: false, p2clicked: false }, 
+      { id: 5, p1clicked: false, p2clicked: false }, 
+      { id: 6, p1clicked: false, p2clicked: false }, 
+      { id: 7, p1clicked: false, p2clicked: false }, 
+      { id: 8, p1clicked: false, p2clicked: false }, 
+      { id: 9, p1clicked: false, p2clicked: false }
       ]
     }
   }
@@ -23,7 +23,7 @@ class Grid extends React.Component {
   render(){
 
     const gridSquares = this.state.squares.map( (square) => {
-      return <button key={square.id} clicked={square.clicked}></button>
+      return <button key={square.id} p1clicked={square.p1clicked} p2clicked={square.p2clicked}></button>
     })
 
     return(

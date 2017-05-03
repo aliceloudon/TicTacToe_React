@@ -9,7 +9,10 @@ class MainContainer extends React.Component {
     this.state = {
       player1Positions: [],
       player2Positions: [],
-      gameWin: false
+      gameWin: false,
+      player1Score: 0,
+      player2Score:0,
+      draws:0
     }
   }
 
@@ -17,7 +20,7 @@ class MainContainer extends React.Component {
     return(
       <div>
         <Grid player1Positions={this.state.player1Positions} player2Positions={this.state.player2Positions}/>
-        <Score/>
+        <Score player1Score = {this.state.player1Score} player2Score = {this.state.player2Score} draws = {this.state.draws}/>
       </div>
     )
   }

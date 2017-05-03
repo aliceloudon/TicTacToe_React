@@ -5,7 +5,9 @@ class Score extends React.Component {
   render(){
     return (
       <div>
-        <p>score goes here</p>
+          <section>{this.props.player1Score}</section>
+          <section>{this.props.player2Score}</section>
+          <section>{this.props.draws}</section>
       </div>
     )
   }
