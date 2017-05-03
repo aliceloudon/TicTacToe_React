@@ -4,10 +4,20 @@ import Score from '../components/Score'
 
 class MainContainer extends React.Component {
 
+  constructor(props){
+    super(props)
+    this.state = {
+      player1Positions: [],
+      player2Positions: [],
+      gameWin: false
+    }
+  }
+
   render(){
     return(
       <div>
-        <Grid />
+        <Grid player1Positions={this.state.player1Positions} player2Positions={this.state.player2Positions}/>
+        <Score/>
       </div>
     )
   }
