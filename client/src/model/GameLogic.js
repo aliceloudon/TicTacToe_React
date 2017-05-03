@@ -1,7 +1,10 @@
 class GameLogic {
 
-  clickedSquare(){
-    console.log('clicked')
+  clickedSquare(counter){
+    if(counter % 2){
+      return 'O'
+    }
+    return 'X'
   }
 
 }

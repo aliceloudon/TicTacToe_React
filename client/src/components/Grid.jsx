@@ -8,25 +8,40 @@ class Grid extends React.Component {
     super(props)
     this.state = {
       squares: [ 
-      { id: 1, p1clicked: false, p2clicked: false }, 
-      { id: 2, p1clicked: false, p2clicked: false }, 
-      { id: 3, p1clicked: false, p2clicked: false }, 
-      { id: 4, p1clicked: false, p2clicked: false }, 
-      { id: 5, p1clicked: false, p2clicked: false }, 
-      { id: 6, p1clicked: false, p2clicked: false }, 
-      { id: 7, p1clicked: false, p2clicked: false }, 
-      { id: 8, p1clicked: false, p2clicked: false }, 
-      { id: 9, p1clicked: false, p2clicked: false }
-      ]
+      { id: 1 }, 
+      { id: 2 }, 
+      { id: 3 }, 
+      { id: 4 }, 
+      { id: 5 }, 
+      { id: 6 }, 
+      { id: 7 }, 
+      { id: 8 }, 
+      { id: 9 }
+      ],
+      currentPlayer: "x"
     }
   }
 
+
+  togglePlayer(){
+    let newPlayer;
+    console.log(this.state.currentPlayer)
+
+    if(this.state.currentPlayer === "x"){
+      newPlayer = "o"
+    }
+    else{
+      newPlayer = "x"
+    }
+  
+    this.setState( { currentPlayer: newPlayer } )
+  } 
 
 
   render(){
 
     const gridSquares = this.state.squares.map( (square) => {
-      return <Button key={square.id} p1clicked={square.p1clicked} p2clicked={square.p2clicked} ></Button>
+      return <Button key={square.id} clicked={square.p1clicked} currentPlayer = {this.state.currentPlayer} togglePlayer={this.togglePlayer.bind(this)} ></Button>
     })
 
     return(
